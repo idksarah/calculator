@@ -1,0 +1,109 @@
+.calculator{
+  background-color: rgb(255, 238, 239);
+  padding: 40px;
+  margin: 30px;
+  width: 350px;
+  margin-top: 100px;
+  border-radius: 7px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.bigDiv {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.display{
+  background-color: rgb(80, 76, 76);
+  font-size: 30px;
+  height: 100px;
+  border-radius: 7px;
+  width: 260px;
+}
+body html {
+  width: fit-content;
+  height: 100%;
+  margin: 0;
+}
+
+.button {
+  width: 75px;
+  height: 55px;
+  background-color: rgb(251, 247, 243);
+  margin: 3px;
+  border-color: rgb(214, 198, 198);
+  color:rgb(152, 34, 56);
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.allTheButtons {
+  display: flex;
+  border-radius: 7px;
+}
+
+.zero {
+  width: 160px;
+}
+
+.operators {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.displayContainer {
+  padding: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 7px;
+  background-color:rgb(188, 90, 105);
+  display: flex;
+  width: 280px;
+}
+
+.clear, .plusMinus {
+  background-color: rgb(194, 77, 87);
+  border-color:rgb(141, 52, 59);
+  color:rgb(237, 215, 215);
+}
+
+.percentage {
+  background-color:rgb(245, 178, 188);
+  color:rgb(249, 233, 233);
+  border-color:rgb(212, 144, 154)
+}
+
+.ribbon {
+  height: 150px;
+  width: 320px;
+  margin-top: -70px;
+  margin-bottom: -30px;
+}
+
+.myMelody {
+  height: 250px;
+  width: auto;
+  margin-top: -210px;
+  margin-left: 220px;
+}
+
+.milkshake {
+  height: 100px;
+  width: auto;
+  margin-top: -1200px;
+  margin-left: -70px;
+}
+
+.strawberry {
+  height: 160px;
+  width: auto;
+  margin-left: 280px;
+  margin-top: -80px;
+}

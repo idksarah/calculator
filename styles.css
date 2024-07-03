@@ -42,6 +42,7 @@ body html {
 .allTheButtons {
   display: flex;
   border-radius: 7px;
+  width: max-content;
 }
 
 .zero {
@@ -63,14 +64,14 @@ body html {
   padding-top: 30px;
   padding-bottom: 30px;
   border-radius: 7px;
-  background-color:rgb(188, 90, 105);
+  background-color:rgb(224, 122, 156);
   display: flex;
   width: 280px;
 }
 
 .clear, .plusMinus {
-  background-color: rgb(194, 77, 87);
-  border-color:rgb(141, 52, 59);
+  background-color: rgb(224, 122, 156);
+  border-color:rgb(202, 99, 133);
   color:rgb(237, 215, 215);
 }
 
@@ -79,14 +80,6 @@ body html {
   color:rgb(249, 233, 233);
   border-color:rgb(212, 144, 154)
 }
-
-.ribbon {
-  height: 150px;
-  width: 320px;
-  margin-top: -70px;
-  margin-bottom: -30px;
-}
-
 .myMelody {
   height: 250px;
   width: auto;
@@ -106,4 +99,20 @@ body html {
   width: auto;
   margin-left: 280px;
   margin-top: -80px;
+}
+
+.background {
+  position: absolute;
+  z-index: 0;
+  width: 390px;
+  height: 500px;
+  opacity: 0.5;
+  background-color: rgb(255, 238, 239);
+  padding: 40px;
+  margin-left: -70px;
+}
+
+.notBackground {
+  position: absolute;
+  z-index: 1;
 }

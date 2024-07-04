@@ -1,4 +1,4 @@
-let displayValue = document.querySelector('.display'); 
+let displayValue = document.querySelector('.display');
 
 function display (input) {
   displayValue.textContent = input;
@@ -19,12 +19,16 @@ function multiplication(a,b){
   display(ans);
 }
 
+function round(num){
+  return Number(Math.round(num + 'e6') + 'e-6');
+}
+
 function division(a,b){
   if(b==0){
-    ans =("can't do that silly goose :p");
+    ans =("...");
     display(ans);
   } else {
-    ans = Number(a)/Number(b);
+    ans = round(Number(a)/Number(b));
     display(ans);
   }
 }
@@ -72,7 +76,7 @@ let zero = document.querySelector('.zero');
 let decimal = document.querySelector('.decimal');
 let percentage = document.querySelector('.percentage');
 
-let addButton = document.querySelector('.addition'); //have to match the button value to the operatiosn within the operate; ie.m ake this == + some how idk;
+let addButton = document.querySelector('.addition');
 addButton.addEventListener('click', () => {
   add=true;
   display('+');
@@ -103,11 +107,12 @@ operatorContainer.addEventListener('click', () => {
 
 percentage.addEventListener('click', ()=> {
   if(operator==false){
+    if(Array.from(a)[0] =='-'){
+      a = a.substring(1)
+    }
     a = '0.' + a;
+    a = '-' + a;
     display(a);
-  } else {
-    b = '0.' + b;
-    display(b);
   }
 });
 
@@ -116,6 +121,11 @@ percentage.addEventListener('click', ()=> {
   one.addEventListener('click', ()=> {
     if(operator==false){
       a +="1";
+      display(a);
+    }else if (a !='' && b!= '' && operator == true){
+      operator = false;
+      a = '1';
+      b ='';
       display(a);
     } else if(b != '' && b != "-") {
       b = '1';
@@ -129,6 +139,11 @@ percentage.addEventListener('click', ()=> {
     if(operator==false){
       a +="2";
       display(a);
+    }else if (a !='' && b!= '' && operator == true){
+      operator = false;
+      a = '2';
+      b ='';
+      display(a);
     } else if(b != '' && b != "-") {
       b = '2';
       display(b);
@@ -140,6 +155,11 @@ percentage.addEventListener('click', ()=> {
   three.addEventListener('click', ()=> {
     if(operator==false){
       a +="3";
+      display(a);
+    }else if (a !='' && b!= '' && operator == true){
+      operator = false;
+      a = '3';
+      b ='';
       display(a);
     } else if(b != '' && b != "-") {
       b = '3';
@@ -153,6 +173,11 @@ percentage.addEventListener('click', ()=> {
     if(operator==false){
       a +="4";
       display(a);
+    }else if (a !='' && b!= '' && operator == true){
+      operator = false;
+      a = '4';
+      b ='';
+      display(a);
     } else if(b != '' && b != "-") {
       b = '4';
       display(b);
@@ -164,6 +189,11 @@ percentage.addEventListener('click', ()=> {
   five.addEventListener('click', ()=> {
     if(operator==false){
       a +="5";
+      display(a);
+    }else if (a !='' && b!= '' && operator == true){
+      operator = false;
+      a = '5';
+      b ='';
       display(a);
     } else if(b != '' && b != "-") {
       b = '5';
@@ -177,6 +207,11 @@ percentage.addEventListener('click', ()=> {
     if(operator==false){
       a +="6";
       display(a);
+    }else if (a !='' && b!= '' && operator == true){
+      operator = false;
+      a = '6';
+      b ='';
+      display(a);
     } else if(b != '' && b != "-") {
       b = '6';
       display(b);
@@ -188,6 +223,11 @@ percentage.addEventListener('click', ()=> {
   seven.addEventListener('click', ()=> {
     if(operator==false){
       a +="7";
+      display(a);
+    }else if (a !='' && b!= '' && operator == true){
+      operator = false;
+      a = '7';
+      b ='';
       display(a);
     } else if(b != '' && b != "-") {
       b = '7';
@@ -201,6 +241,11 @@ percentage.addEventListener('click', ()=> {
     if(operator==false){
       a +="8";
       display(a);
+    }else if (a !='' && b!= '' && operator == true){
+      operator = false;
+      a = '8';
+      b ='';
+      display(a);
     } else if(b != '' && b != "-") {
       b = '8';
       display(b);
@@ -212,6 +257,11 @@ percentage.addEventListener('click', ()=> {
   nine.addEventListener('click', ()=> {
     if(operator==false){
       a +="9";
+      display(a);
+    }else if (a !='' && b!= '' && operator == true){
+      operator = false;
+      a = '9';
+      b ='';
       display(a);
     } else if(b != '' && b != "-") {
       b = '9';
@@ -225,6 +275,11 @@ percentage.addEventListener('click', ()=> {
     if(operator==false){
       a +="0";
       display(a);
+    }else if (a !='' && b!= '' && operator == true){
+      operator = false;
+      a = '0';
+      b ='';
+      display(a);
     } else if(b != '' && b != "-") {
       b = '0';
       display(b);
@@ -237,25 +292,19 @@ percentage.addEventListener('click', ()=> {
     if(operator==false){
       a +=".";
       display(a);
+    }else if (a !='' && b!= '' && operator == true){
+      operator = false;
+      a = '0.';
+      b ='';
+      display(a);
     } else if(b != '' && b != "-") {
-      b = '.'; //this isn't right i don't think but idc tbh
+      b = '.'; 
       display(b);
     } else{
       b +=".";
       display(b);
     }
-  }); //i think when uadd the decimal like 1.4 4 overwrites 1
-
-//assigning values to a and b
-
-
-/*if(a!='' && (add == true || sub == true || mul == true || div == true)){
-  first = false;
-  second = true; //could toggle? need to add that later so the calculator can work more than once
-} //uidik where to put this but anyway
-
-//reset a and b every time; store last in a last
-//requires an initial click before everything registers but we'll fihguire that out later*/
+  });
 
 let equals = document.querySelector('.equals');
 equals.addEventListener('click', ()=> {
@@ -278,18 +327,18 @@ plusMinus.addEventListener('click', ()=> {
   if(operator==false){
     if(Array.from(a)[0] =='-'){
       a = a.substring(1)
+      display(a);
     } else {
       a = '-' + a;
+      display(a);
     }
   } else {
     if(Array.from(b)[0] =='-'){
       b = b.substring(1)
+      display(b);
     } else {
       b = '-' + b;
+      display(b);
     }
   }
 })
-
-//i think there's an issue with subtraction but idk how
-//needs to rewrite answer on screen
-//should be able to start an entirely new operation

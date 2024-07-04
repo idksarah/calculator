@@ -1,5 +1,8 @@
+.text {
+  font-family: monospace;
+}
+
 .calculator{
-  background-color: rgb(255, 238, 239);
   padding: 40px;
   margin: 30px;
   width: 350px;
@@ -16,11 +19,13 @@
 }
 
 .display{
-  background-color: rgb(80, 76, 76);
-  font-size: 30px;
-  height: 100px;
+  background-color: rgb(146, 148, 155);
+  font-size: 50px;
+  height: 60px;
   border-radius: 7px;
   width: 260px;
+  color:rgb(55, 55, 59);
+  margin-left: 8px;
 }
 body html {
   width: fit-content;
@@ -33,8 +38,8 @@ body html {
   height: 55px;
   background-color: rgb(251, 247, 243);
   margin: 3px;
-  border-color: rgb(214, 198, 198);
-  color:rgb(152, 34, 56);
+  border-color: rgb(239, 222, 222);
+  color:rgb(177, 51, 74);
   border-radius: 7px;
   cursor: pointer;
 }
@@ -43,6 +48,7 @@ body html {
   display: flex;
   border-radius: 7px;
   width: max-content;
+  margin-left: -5px;
 }
 
 .zero {
@@ -64,21 +70,21 @@ body html {
   padding-top: 30px;
   padding-bottom: 30px;
   border-radius: 7px;
-  background-color:rgb(224, 122, 156);
+  background-color:rgb(242, 175, 198);
   display: flex;
   width: 280px;
 }
 
 .clear, .plusMinus {
-  background-color: rgb(224, 122, 156);
-  border-color:rgb(202, 99, 133);
-  color:rgb(237, 215, 215);
+  background-color: rgb(242, 175, 198);
+  border-color:rgb(242, 175, 198);
+  color:rgb(255, 252, 252);
 }
 
 .percentage {
-  background-color:rgb(245, 178, 188);
-  color:rgb(249, 233, 233);
-  border-color:rgb(212, 144, 154)
+  background-color:rgb(251, 221, 226);
+  color:rgb(255, 252, 252);
+  border-color:rgb(251, 221, 226);
 }
 .myMelody {
   height: 250px;
@@ -90,7 +96,7 @@ body html {
 .milkshake {
   height: 100px;
   width: auto;
-  margin-top: -1200px;
+  margin-top: -1800px;
   margin-left: -70px;
 }
 
@@ -104,15 +110,21 @@ body html {
 .background {
   position: absolute;
   z-index: 0;
-  width: 390px;
-  height: 500px;
+  width: 370px;
+  height: 450px;
   opacity: 0.5;
   background-color: rgb(255, 238, 239);
   padding: 40px;
-  margin-left: -70px;
+  margin-left: -65px;
+  border-radius: 15px;
+  margin-top: -50px;
 }
 
 .notBackground {
   position: absolute;
   z-index: 1;
+}
+
+.body {
+  background-color: rgb(255, 253, 253)
 }
